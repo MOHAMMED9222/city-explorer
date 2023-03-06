@@ -24,3 +24,5 @@
 ## OUTLINE
 ![Lab 06 Outline](https://user-images.githubusercontent.com/122310719/223247995-68667ec0-8e70-4254-9d36-bd4b445f6d97.png)
 
+## contributer
+Ryan Bagan
