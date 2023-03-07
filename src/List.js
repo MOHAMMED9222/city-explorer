@@ -9,8 +9,8 @@ class List extends React.Component {
       <>
         <ListGroup>
           <ListGroup.Item>{this.props.data.display_name}</ListGroup.Item>
-          <ListGroup.Item>{this.props.data.latitude}</ListGroup.Item>
-          <ListGroup.Item>{this.props.data.longitude}</ListGroup.Item>
+          <ListGroup.Item>{this.props.data.lat}</ListGroup.Item>
+          <ListGroup.Item>{this.props.data.lon}</ListGroup.Item>
         </ListGroup>
       </>
     )

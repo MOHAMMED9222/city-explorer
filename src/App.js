@@ -32,13 +32,13 @@ class App extends React.Component {
     // console.log('event fired');
     // get the data from the SW API
     // axios is the library of code that we will use to make our requests
-    let cityexplorercharacters = await axios.get(`https://us1.locationiq.com/v1/search?key=${process.env.REACT_APP_LOCATIONIQ_API_KEY}&q=${this.state.cityName}&format=json`);
+    let cityexplorercharacters = await axios.get(`https://us1.locationiq.com/v1/search?key=${process.env.REACT_APP_CITY_KEY}&q=${this.state.cityName}&format=json`);
     // console.log(cityexplorercharacters.data.results);
     //save it in state
     this.setState({
       cityData: cityexplorercharacters.data[0],
-      latitude: cityexplorercharacters.data[0].latitude,
-      longitude: cityexplorercharacters.data[0].longitude
+      latitude: cityexplorercharacters.data[0].lat,
+      longitude: cityexplorercharacters.data[0].lon
     });
 
   };
@@ -46,7 +46,7 @@ class App extends React.Component {
 
 
   render() {
-    let mapURL = `https://maps.locationiq.com/v3/staticmap?key=${process.env.REACT_APP_LOCATIONIQ_API_KEY}&center=47.6038321,-122.330062&zoom=12`;
+    let mapURL = `https://maps.locationiq.com/v3/staticmap?key=${process.env.REACT_APP_CITY_KEY}&center=${this.state.latitude},${this.state.longitude}&zoom=12`;
     return (
       <>
         <main>
@@ -58,7 +58,7 @@ class App extends React.Component {
           <List
             data={this.state.cityData}
           />
-
+<img src={mapURL}/>
         </main>
 
 
