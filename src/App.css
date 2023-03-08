@@ -36,3 +36,35 @@
     transform: rotate(360deg);
   }
 }
+
+form {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 3rem;
+  margin-left: 70px;
+}
+
+div {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+  margin-left: 25px;
+  min-height: 75px;
+}
+
+body {
+  background-color: rgba(173, 46, 1, 0.912);
+}
+
+img {
+  display: flex;
+  margin-top: 3rem;
+  justify-content: center;
+  flex-direction: row;
+
+}
+
+main {
+  display: block;
+}
