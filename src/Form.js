@@ -7,10 +7,10 @@ class Forms extends React.Component {
   render() {
     return (
       <>
-        <Form onSubmit={this.props.eventHandler}>
+        <Form onSubmit={this.props.submitHandler}>
           <Form.Group>
-            <Button>Search for City Data</Button>
-            <Form.Control type="text" placeholder="eg. Seattle" name="cityInput" onChange={this.props.handleCityInput} required />
+            <Form.Label>Search for City Data
+            <Form.Control type="text" placeholder="eg. Seattle" name="cityInput" onChange={this.props.handleCityInput} required /></Form.Label>
             <Button type="submit">Explore!</Button>
           </Form.Group>
         </Form>
