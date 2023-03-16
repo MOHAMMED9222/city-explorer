@@ -25,7 +25,7 @@ class App extends React.Component {
       inputError: true,
       weatherError: true,
       cityWeather: [],
-      cityMovies: {},
+      cityMovies: [],
 
 
     }
@@ -44,8 +44,8 @@ try{
     // console.log('event fired');
     // get the data from the SW API
     // axios is the library of code that we will use to make our requests
-    let locationiqdata = await axios.get(`https://us1.locationiq.com/v1/search?key=${process.env.REACT_APP_CITY_KEY}&q=${this.state.cityName}&format=json`);
-    console.log(locationiqdata);
+    let locationiqdata = await axios.get(`https://us1.locationiq.com/v1/search?key=${process.env.REACT_APP_LOCATIONIQ_API_KEY}&q=${this.state.cityName}&format=json`);
+ //console.log(`https:us1.locationiq.com/v1/search?key=${process.env.REACT_APP_LOCATIONIQ_API_KEY}&q=${this.state.cityName}&format=json`);
 
     // connect to movie server
     console.log(`${process.env.REACT_APP_SERVER}/movie?keyword=${this.state.cityName}`)
@@ -81,7 +81,7 @@ try{
 
 
   render() {
-    let mapURL = `https://maps.locationiq.com/v3/staticmap?key=${process.env.REACT_APP_CITY_KEY}&center=${this.state.latitude},${this.state.longitude}&zoom=12`;
+    let mapURL = `https://maps.locationiq.com/v3/staticmap?key=${process.env.REACT_APP_LOCATIONIQ_API_KEY}&center=${this.state.latitude},${this.state.longitude}&zoom=12`;
     return (
       <>
 
@@ -104,9 +104,9 @@ try{
         <Weather
         cityWeather={this.state.cityWeather}
         />
-        <Movie
+       { this.state.cityMovies && <Movie
         cityMovies={this.state.cityMovies}
-        />
+        />}
         
 
         {this.state.gotcityData === true &&
