@@ -7,19 +7,24 @@ class Movie extends React.Component {
   render() {
         return ( 
         <>
-        <Card>
-          <Card.Img variant="top" src={this.props.image_url}/>
+        {this.props.cityMovies.map(movie => 
+          
+         
+        <Card key={movie.title
+        }>
+          <Card.Img variant="top" src={movie.image_url}/>
           <Card.Body>
-            <Card.Title>{this.props.title}</Card.Title>
+            <Card.Title>{movie.title}</Card.Title>
             <Card.Text>
-              Overview: {this.props.overview}
+              Overview: {movie.overview}
               </Card.Text>
               </Card.Body>
-              <ListGroup.Item>Average Votes: {this.props.average_votes}</ListGroup.Item>
-              <ListGroup.Item>Total Votes: {this.props.total_votes}</ListGroup.Item>
-              <ListGroup.Item>Popularity: {this.props.popularity}</ListGroup.Item>
-              <ListGroup.Item>Released On: {this.props.released_on}</ListGroup.Item>
+              <ListGroup.Item>Average Votes: {movie.average_votes}</ListGroup.Item>
+              <ListGroup.Item>Total Votes: {movie.total_votes}</ListGroup.Item>
+              <ListGroup.Item>Popularity: {movie.popularity}</ListGroup.Item>
+              <ListGroup.Item>Released On: {movie.released_on}</ListGroup.Item>
               </Card>
+               )}
               </>);
       }
     }

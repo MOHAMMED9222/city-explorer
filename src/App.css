@@ -54,7 +54,8 @@ div {
 }
 
 body {
-  background-color: rgba(173, 46, 1, 0.912);
+  /* background-color: rgba(173, 46, 1, 0.912); */
+  /* background-image: url("nj"); */
   display: flex;
   flex-wrap: wrap;
 }
