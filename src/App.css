@@ -42,28 +42,30 @@ form {
   justify-content: space-between;
   align-items: flex-start;
   margin-top: 3rem;
-  margin-left: 70px;
+
+  max-width: fit-content;
 }
 
-div {
+/* div {
   display: flex;
   justify-content: center;
   margin-top: 3rem;
   margin-left: 25px;
-  min-height: 75px;
-}
+  min-height: 75px; */
+/* } */
 
 body {
   /* background-color: rgba(173, 46, 1, 0.912); */
   /* background-image: url("nj"); */
   display: flex;
   flex-wrap: wrap;
+  background-color: orangered;
 }
 
-img {
+/* img {
   display: flex;
   margin-top: 3rem;
   justify-content: center;
   flex-direction: row;
 
-}
+} */
